@@ -1,0 +1,46 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.edmodo.cropper.CropImageView
+        android:id="@+id/cropImageView"
+        android:layout_gravity="center"
+        android:background="@android:color/black"
+        custom:imageResource="@drawable/nature"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:id="@+id/layoutFooter"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#DBDBDB"
+        android:padding="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textAllCaps="true"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/BorderlessButton"
+            android:background="@android:color/white"
+            android:layout_marginRight="0.5dp"
+            android:id="@+id/btnCancel" />
+
+        <Button
+            android:layout_weight="1"
+            android:text="OK"
+            android:textAllCaps="true"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_marginLeft="0.5dp"
+            style="@style/BorderlessButton"
+            android:id="@+id/btnOk" />
+    </LinearLayout>
+</RelativeLayout>

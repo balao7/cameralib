@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/layoutCamera"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+
+    <FrameLayout
+        android:background="#00ff0000"
+        android:id="@+id/camera_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+    <include layout="@layout/camera_buttons_portrait" />
+
+    <FrameLayout
+        android:id="@+id/result"
+
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"/>
+
+    <RelativeLayout
+        android:padding="@dimen/transparent_top_bar_padding"
+        android:background="@color/transparent_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/transparent_top_bar">
+        <TextView
+            android:id="@+id/txtSendTo"
+            android:layout_toLeftOf="@+id/layoutTimer"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/send_to_friend_text_size"
+            android:textStyle="bold"
+            android:text="Send to Friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+
+            android:layout_centerVertical="true"
+            android:id="@+id/layoutTimer"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/record"
+                android:layout_width="13dp"
+                android:layout_height="13dp" />
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:text="00:00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTimer" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

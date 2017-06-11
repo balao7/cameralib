@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:background="#00ff0000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="right|center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+
+
+        <ImageView
+            android:alpha="0.9"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/camera_icon_size"
+            android:layout_height="@dimen/camera_icon_size"
+            android:src="@drawable/ic_switch_camera"
+            android:id="@+id/btnCameraSwitch" />
+
+        <FrameLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/btnCapture"
+                android:elevation="5dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/capture_small_oval_selector"
+                android:scaleType="centerInside"
+                android:background="@drawable/capture_large_oval_selector"
+                android:padding="2dp"
+                android:layout_gravity="center"
+                />
+        </FrameLayout>
+
+
+        <ImageView
+            android:layout_gravity="center"
+            android:alpha="0.9"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:layout_width="@dimen/camera_icon_size"
+            android:layout_height="@dimen/camera_icon_size"
+            android:padding="2dp"
+            android:src="@drawable/ic_autoflash"
+            android:id="@+id/btnCameraFlashlight" />
+
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

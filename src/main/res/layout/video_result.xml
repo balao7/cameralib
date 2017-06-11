@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+<VideoView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:id="@+id/videoView"
+android:layout_gravity="center" />
+
+    <ImageView
+        android:id="@+id/btnPlay"
+        android:visibility="visible"
+        android:src="@drawable/ic_play_arrow_white_48dp"
+        android:background="@drawable/play_button_oval"
+        android:elevation="2dp"
+        android:scaleType="centerInside"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutImgResult"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <FrameLayout
+        android:layout_above="@+id/layoutFooter"
+        android:id="@+id/mediaControllerLayout"
+        android:padding="10dp"
+        android:background="#00ff0000"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"></FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutFooterContainer"
+        android:layout_above="@+id/layoutFooter"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/txtElapsed"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+
+            android:thumbOffset="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/txtElapsed"
+            android:layout_toLeftOf="@+id/txtTotal"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/txtTotal"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/layoutFooter"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <include layout="@layout/capture_result_actions_layout" />
+    </FrameLayout>
+
+</RelativeLayout>
+
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:padding="@dimen/transparent_top_bar_padding"
+        android:background="@color/transparent_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/transparent_top_bar">
+        <TextView
+
+            android:id="@+id/txtSendTo"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/send_to_friend_text_size"
+            android:textStyle="bold"
+            android:text="Send to Friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

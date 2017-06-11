@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp">
+
+        <View
+            android:alpha="0.5"
+            android:background="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="42dp" />
+
+    <EditText
+        android:textColorHint="#ACAAAB"
+        android:singleLine="true"
+        android:lines="1"
+        android:padding="10dp"
+        android:inputType="textCapSentences"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:imeOptions="actionDone"
+        android:hint="@string/add_a_caption_dots"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:id="@+id/inputCaption" />
+    </FrameLayout>
+
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cameraResultActionsLayout"
+    android:orientation="horizontal"
+    android:layout_gravity="bottom"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/picture_result">
+
+
+    <ImageView
+        android:text="cancel"
+        android:background="@drawable/action_button_selector"
+        android:src="@drawable/ic_clear_white_36dp"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:textAllCaps="true"
+        android:padding="10dp"
+        android:layout_alignParentLeft="true"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCancelCamera" />
+
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:text="done"
+        android:layout_gravity="right"
+        android:textAllCaps="true"
+        android:background="@drawable/action_button_selector"
+        android:src="@drawable/ic_done_white_36dp"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDoneCamera" />
+
+</RelativeLayout>
+
+</LinearLayout>

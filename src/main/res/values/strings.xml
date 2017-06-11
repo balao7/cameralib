@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CameraLib</string>
+    <string name="add_a_caption_dots">Add a caption...</string>
+    <string name="title_activity_camera">CameraActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_image_crop">ImageCropActivity</string>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutImgResult"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+
+
+    <ImageView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:id="@+id/imageResult" />
+
+
+    <RelativeLayout
+        android:padding="@dimen/transparent_top_bar_padding"
+        android:background="@color/transparent_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/transparent_top_bar">
+        <TextView
+            android:id="@+id/txtSendTo"
+            android:layout_toLeftOf="@+id/layoutImageActions"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/send_to_friend_text_size"
+            android:textStyle="bold"
+            android:text="Send to Friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:id="@+id/layoutImageActions"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_crop_white_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnCropImage" />
+
+            <ImageView
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_rotate_right_white_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnRotateImage" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/capture_result_actions_layout" />
+
+</FrameLayout>
